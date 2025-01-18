@@ -59,5 +59,7 @@ console.log({valor})
 //Eventos
 
 btnPedir.addEventListener("click", ()=>{
-    console.log("click");
+    // console.log("click");
+    const carta = pedirCarta();
+    console.log(carta);
 });
