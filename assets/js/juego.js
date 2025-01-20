@@ -9,12 +9,6 @@ const especiales = ["A", "J", "Q", "K"];
 const btnPedir = document.querySelector("#btnPedir");
 
 
-//Referencias de HTML
-
-const btnPedir = document.querySelector("#btnPedir");
-// console.log(btnPedir)
-
-
 //esta funcion crea una nueva baraja
 let crearDeck = () => {
     for (let i = 2; i <= 10; i++) {
@@ -41,12 +35,8 @@ crearDeck();
 //esta funcion te da una carta
 
 const pedirCarta = ()=>{
-<<<<<<< HEAD
     const carta = deck.pop()
 
-=======
-    const carta = deck.pop() 
->>>>>>> de28e882b24d1edfaa535b23073c3ae55d048c70
     // console.log(deck)
     // console.log(carta)
     return carta;
@@ -61,7 +51,6 @@ const valorCarta = (carta)=>{
 
 }
 
-<<<<<<< HEAD
 // const valor = valorCarta("QD");
 // console.log({valor})
 
@@ -76,16 +65,3 @@ btnPedir.addEventListener("click", () => {
 
 
 
-=======
-const valor = valorCarta("QD");
-console.log({valor})
-
-
-//Eventos
-
-btnPedir.addEventListener("click", ()=>{
-    // console.log("click");
-    const carta = pedirCarta();
-    console.log(carta);
-});
->>>>>>> de28e882b24d1edfaa535b23073c3ae55d048c70
