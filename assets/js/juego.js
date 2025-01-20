@@ -4,12 +4,16 @@ let deck         = [];
 const tipos      = ["C", "D", "H", "S"];
 const especiales = ["A", "J", "Q", "K"];
 
+//Referencias del HTML
+
+const btnPedir = document.querySelector("#btnPedir");
+
 
 //esta funcion crea una nueva baraja
 let crearDeck = () => {
     for (let i = 2; i <= 10; i++) {
         for(let tipo of tipos){
-            deck.push(i + tipo); 
+            deck.push(i + tipo);
         }
     }
 
@@ -19,9 +23,9 @@ let crearDeck = () => {
         }
     }
 
-    
+
     deck = _.shuffle(deck);
-    console.log(deck)
+    // console.log(deck)
 
 }
 
@@ -32,9 +36,9 @@ crearDeck();
 
 const pedirCarta = ()=>{
     const carta = deck.pop()
-   
-    console.log(deck)
-    console.log(carta)
+
+    // console.log(deck)
+    // console.log(carta)
     return carta;
 }
 
@@ -44,8 +48,20 @@ const valorCarta = (carta)=>{
     const valor = carta.substring(0, carta.length -1);
     return(isNaN( valor)) ?
         (valor === "A") ? 11 : 10 : valor * 1;
-  
+
 }
 
-const valor = valorCarta("QD");
-console.log({valor})
+// const valor = valorCarta("QD");
+// console.log({valor})
+
+
+//Evento
+
+btnPedir.addEventListener("click", () => {
+
+    console.log("click");
+});
+
+
+
+
