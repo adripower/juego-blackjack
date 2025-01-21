@@ -63,11 +63,4 @@ btnPedir.addEventListener("click", () => {
 });
 
 
-function suma1 (a,b){
-    return a + b
-}
-const result = suma1(2, 2)
-
-console.log(result)
-
 
