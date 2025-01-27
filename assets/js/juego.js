@@ -11,7 +11,7 @@ let puntosOrdenador = 0;
 const btnPedir = document.querySelector("#btnPedir");
 //console.log(btnPedir
 
-//enlaza con la pagina web 
+//enlaza con la pagina web ,aqui hay un error 
 const divCartaJugador = document.querySelector("small");
 
 const puntosHtml = document.querySelectorAll("small");
@@ -78,9 +78,18 @@ btnPedir.addEventListener("click", () => {
     //console.log(puntosJugador)
 
     // <img class="carta" src="assets/cartas/2S.png" alt="">
-        const imgCarta = document.createElement("img");
-        imgCarta = (`assets/cartas/${carta}.png`);
+    const imgCarta = document.createElement("img");
+    imgCarta.src = `assets/cartas/${carta}.png`;
+    imgCarta.classList.add("carta")
     divCartaJugador.append(imgCarta);
+
+    if (puntosJugador > 21){
+        console.warn("Mala suerta , perdistes ");
+        btnPedir.disable = true;
+    }else if  ( puntosJugador ===21){
+        console.warn(" Tienes 21 puntos!");
+        btnPedir.disable = true;
+    }
 });
 
 
