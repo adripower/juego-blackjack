@@ -4,9 +4,13 @@ let deck         = [];
 const tipos      = ["C", "D", "H", "S"];
 const especiales = ["A", "J", "Q", "K"];
 
+let puntosJugador = 0; 
+let puntosOrdenador = 0;
 //Referencias del HTML
 
 const btnPedir = document.querySelector("#btnPedir");
+//console.log(btnPedir
+
 
 
 //esta funcion crea una nueva baraja
@@ -34,8 +38,13 @@ crearDeck();
 
 //esta funcion te da una carta
 
-const pedirCarta = ()=>{
-    const carta = deck.pop()
+const pedirCarta = () => {
+
+    if (deck.length === 0){
+        throw " No hay carta en el deck";
+    }
+
+    const carta = deck.pop();
 
     // console.log(deck)
     // console.log(carta)
@@ -59,6 +68,7 @@ const valorCarta = (carta)=>{
 
 btnPedir.addEventListener("click", () => {
 
+    const carta = pedirCarta();
     console.log("click");
 });
 
