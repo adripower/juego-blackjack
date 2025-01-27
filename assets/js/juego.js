@@ -11,6 +11,9 @@ let puntosOrdenador = 0;
 const btnPedir = document.querySelector("#btnPedir");
 //console.log(btnPedir
 
+//enlaza con la pagina web 
+const divCartaJugador = document.querySelector("small");
+
 const puntosHtml = document.querySelectorAll("small");
 
 //esta funcion crea una nueva baraja
@@ -74,6 +77,10 @@ btnPedir.addEventListener("click", () => {
     puntosHtml [0].innerText = puntosJugador;
     //console.log(puntosJugador)
 
+    // <img class="carta" src="assets/cartas/2S.png" alt="">
+        const imgCarta = document.createElement("img");
+        imgCarta = (`assets/cartas/${carta}.png`);
+    divCartaJugador.append(imgCarta);
 });
 
 
